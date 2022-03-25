@@ -9,9 +9,9 @@ const ACTIONS = {
 };
 
 const initialState = {
-  lastNoteCreated: savedItems.lastNoteCreated,
-  totalNotes: savedItems.totalNotes,
-  notes: savedItems.notes,
+  lastNoteCreated: savedItems ? savedItems.lastNoteCreated : null,
+  totalNotes: savedItems ? savedItems.totalNotes : 0,
+  notes: savedItems ? savedItems.notes : [],
 };
 
 function reducer(previousState, action) {
